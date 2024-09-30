@@ -1,0 +1,27 @@
+/*Custom Header*/
+header{
+  display: block;
+}
+.section{
+    height: 100vh;
+  }
+  .animImgConatainer{
+    width: 800px;
+    height: 600px;
+    background-size: cover;
+  }
+  .nyimg{
+    object-fit: cover;
+    position: absolute;
+    top: 0; /* Начальная позиция сверху */
+    left: 0; /* Начальная позиция слева */
+    transform: translate(10px, 20px); /* Сдвиг на 10px вправо и 20px вниз */
+  }
+  .heroContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16%;
+  }
+

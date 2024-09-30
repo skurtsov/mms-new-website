@@ -1,0 +1,160 @@
+@import url("https://use.typekit.net/nyb0kom.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*import from adobe*/
+/*import from otf*/
+
+
+
+:root {
+  --background: #04105d;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #04105d;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "sporty-pro", sans-serif;
+  overflow-x: hidden;
+}
+h1{
+  font-family: "sporty-pro", sans-serif;
+}
+li{
+  font-family: "sporty-pro", sans-serif;
+font-weight: 400;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.list-style-custom{
+  list-style: "-";
+}
+.custom-input{
+  height: 9vh;
+  outline: none;
+  background: transparent !important;
+  transition-duration: 1s;
+  border-bottom:2px solid white ;
+  color: #fff;
+}
+.custom-input::placeholder {
+color: #fff;
+font-size: 0.9rem;
+transition-duration: .8s;
+}
+.custom-input:focus::placeholder {
+  left: 20px;
+  bottom: 10px;
+  transform: translateX(110%);
+}
+/*Paperplane test*/
+@import "nib"
+
+* {
+  transition: all .15s;
+  outline: none;
+  overflow: hidden;
+}
+
+button {
+  font-size: 19px;
+  font-family: 'Pacifico';
+  overflow: visible;
+  border-radius: 3px;
+  position: relative;
+  padding-right: 30px;
+  background-color: #ECFBFF;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  display: block;
+  margin: 13% auto;
+  height: 60px;
+  width: 200px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #DDF7FF;
+    
+    svg {
+      transform: rotate(10deg);
+      transition: transform .15s;
+    }
+  }
+  
+  svg {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    height: 30px;
+    width: auto;
+    transition: transform .15s;
+    
+    path {
+      fill: #2D7586;
+    }
+  }
+  
+  &.clicked {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #fff;
+    padding-right: 6px;
+    animation: bounce-in .3s;
+    cursor: default;
+
+    svg {
+      animation: flyaway 1.3s linear;
+      top: -80px;
+      right: -1000px;
+      
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@keyframes flyaway {
+  0%   { transform: rotate(10deg);
+         top: 13px;
+         right: 25px;
+         height: 30px; }
+  5%   { transform: rotate(10deg);
+         top: 13px;
+         right: 0px;
+         height: 30px; }
+  20%   { transform: rotate(-20deg);
+          top: 13px;
+          right: -130px;
+          height: 45px; }  
+  40%   { transform: rotate(10deg);
+          top: -40px;
+          right: -280px;
+          opacity: 1; }
+  100% { transform: rotate(60deg);
+         top: -200px;
+         right: -1000px;
+         height: 0;
+         opacity: 0; }
+}
+
+@keyframes bounce-in {
+  0% { padding-right: 30px; }
+  40% { padding-right: 6px; }
+  50% { padding-left: 30px; }
+  100% { padding-left: 6px; }
+}
