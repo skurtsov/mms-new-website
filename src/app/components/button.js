@@ -2,7 +2,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { useState } from 'react';
+import '../mobile.css'
 const customStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
@@ -18,11 +19,18 @@ const customStyles = {
     backgroundColor: '#04105d',
     border:'3px solid white',
     width:'30vw',
+    overflowX:'hidden',
 
   },
 };
 
 function Button({ text }) {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault(); // Исправлено здесь
+    setIsClicked(!isClicked);
+  };
     const [modalIsOpen, setIsOpen] = React.useState(false);
     let subtitle;
 
@@ -65,6 +73,7 @@ function Button({ text }) {
  
 
  <div className="flex flex-col">
+  <h3 className='text-white text-center text-2xl'>Fill the form and we will<br/> contact you soon</h3>
  <div>
      
      <input
@@ -101,6 +110,25 @@ function Button({ text }) {
        className="custom-input mt-1 block w-full    p-2"
      />
    </div>
+   <button onClick={handleClick} className={isClicked ? 'clicked' : ''}>
+      <p>{isClicked ? 'Sent!' : 'Send'}</p>
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 512 512"
+        enableBackground="new 0 0 512 512"
+        xmlSpace="preserve"
+      >
+        <path
+          id="paper-plane-icon"
+          d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+              M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"
+        ></path>
+      </svg>
+    </button>
  </div>
 
 

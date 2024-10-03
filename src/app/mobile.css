@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+   
+    .ReactModal__Content {
+      width: 90vw !important; 
+      height: 70vh;
+      border-radius: 15px; 
+    }
+  }
+  

@@ -25,3 +25,13 @@ header{
     margin-left: 16%;
   }
 
+  @media (max-width: 768px) {
+    /* Стили для мобильных устройств */
+    .ReactModal__Content {
+      width: 90vw !important; /* 90% ширины для мобильных */
+      border-radius: 15px; /* Закругление углов */
+    }
+  }
+  
+
+  

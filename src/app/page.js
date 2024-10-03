@@ -5,7 +5,7 @@ import StickyHeader from "./components/header";
 import Hero from "./components/hero";
 import ModeluesDev from "./components/modulesdev";
 import PartnersGrid from "./components/partners";
-import Second from "./components/second";
+import Websites from "./components/websites";
 import styles from "./custom.css";
 
 
@@ -15,9 +15,9 @@ export default function Home() {
 
     <div className={styles.page}>
 
-      {/* <StickyHeader/> */}
+      <StickyHeader/> 
       <Hero/>
-      <Second/>
+      <Websites/>
       <Apps/>
       <Bots/>
       <ModeluesDev/>

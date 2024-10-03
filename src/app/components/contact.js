@@ -13,7 +13,7 @@ function ContactForm() {
     setIsClicked(!isClicked);
   };
   return (
-    <section className='h-screen'>
+    <section id="contact" className='h-screen'>
       <div className="container mx-auto flex justify-center items-center h-screen px-4">
         <div className="flex flex-col md:flex-row w-full justify-center items-start ">
           <div className="flex-1 flex flex-col h-full justify-center p-4">

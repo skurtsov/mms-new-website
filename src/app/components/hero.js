@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import logo from "../img/logo.png"
 
-
 const textLines = [
   "New generation of ",
   "Software solutions  ",
@@ -14,10 +13,10 @@ const textLines = [
 
 function Hero() {
   return (
-    <section className='h-screen'>
+    <section id="home" className='h-screen'>
       <div className="container mx-auto flex justify-center items-center h-screen">
-        <div className="flex flex-col md:flex-row w-full ">
-          <div className="flex-1 flex flex-col justify-center	 p-4">
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="flex-1 flex flex-col justify-center p-4 text-center md:text-left">
             {textLines.map((line, index) => (
               <motion.div
                 key={index}
@@ -26,21 +25,18 @@ function Hero() {
                 transition={{ duration: 0.5, delay: index * 0.3 }}
                 style={{
                   color: '#fff',
-                  fontSize: 'clamp(1.5rem, 5vw, 3rem)'
+                  fontSize: 'clamp(1.5rem, 7.5vw, 3rem)'
                 }}
               >
-                <h1>{line}                
-
-                </h1>
-
+                <h1>{line}</h1>
               </motion.div>
             ))}
           </div>
           <div className="flex-1 overflow-hidden p-4">
-          <motion.div initial={{ translateY: '100vw' }}
-                animate={{ translateY: 0 }}
-                transition={{ duration: 0.8, delay: 0.5}}>
-            <Image src={logo}/>
+            <motion.div initial={{ translateY: '100vw' }}
+              animate={{ translateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}>
+              <Image src={logo} />
             </motion.div>
           </div>
         </div>

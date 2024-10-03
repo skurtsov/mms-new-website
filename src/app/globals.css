@@ -20,7 +20,9 @@
     --foreground: #ededed;
   }
 }
-
+html{
+  overflow-x: hidden;
+}
 body {
   color: var(--foreground);
   background: var(--background);
@@ -71,13 +73,12 @@ transition-duration: .8s;
 }
 
 button {
-  font-size: 19px;
-  font-family: 'Pacifico';
+  font-size: 17px;
   overflow: visible;
   border-radius: 3px;
   position: relative;
   padding-right: 30px;
-  background-color: #ECFBFF;
+  background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
   display: block;
@@ -85,9 +86,10 @@ button {
   height: 60px;
   width: 200px;
   cursor: pointer;
+  border-radius: 20px;
   
   &:hover {
-    background-color: #DDF7FF;
+    background-color: #ffffff5d;
     
     svg {
       transform: rotate(10deg);
@@ -104,12 +106,12 @@ button {
     transition: transform .15s;
     
     path {
-      fill: #2D7586;
+      fill: #fff;
     }
   }
   
   &.clicked {
-    background-color: #fff;
+    background-color: #04105d;
     border: 2px solid #fff;
     color: #fff;
     padding-right: 6px;
@@ -157,4 +159,59 @@ button {
   40% { padding-right: 6px; }
   50% { padding-left: 30px; }
   100% { padding-left: 6px; }
+}
+
+
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ширина 100% от ширины экрана */
+  height: 100vh; /* Высота 100% от высоты экрана */
+  background-color: #0000009e; /* Цвет фона */
+  transform: translateX(-100%); /* Скрываем меню за пределами экрана */
+  transition: transform 0.7s ease-in-out; /* Анимация для выезда */
+  z-index: 100; /* Убедитесь, что меню выше других элементов */
+}
+
+.mobile_menu.open {
+  transform: translateX(0); /* Перемещаем меню на экран */
+}
+
+.myclose {
+  cursor: pointer; /* Курсор на кнопке закрытия */
+  padding: 16px; /* Отступы для кнопки */
+  font-size: 24px; /* Размер шрифта для иконки */
+}
+
+.mobile-menu-list {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin-top: 50px; /* Отступ сверху для списка */
+  color: #fff;
+}
+
+.li-menu-mob {
+  padding: 15px; /* Отступы для пунктов меню */
+}
+
+.custom-header{
+  background-color: rgb(0 0 0 / 19%);
+}
+
+a { color: #fff;display:inline-block; margin:0;text-transform:uppercase; }
+a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #fff;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+a:hover:after { transform: scaleX(1); }
+a.fromRight:after{ transform-origin:100% 50%; }
+a.fromLeft:after{  transform-origin:  0% 50%; }
+
+.active_section{
+  transition: transform 250ms ease-in-out;
+  border-bottom: solid 3px #fff;  
 }
