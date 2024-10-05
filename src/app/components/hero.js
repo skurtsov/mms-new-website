@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import logo from "../img/logo.png"
 
-const textLines = [
-  "New generation of ",
-  "Software solutions  ",
-  "For your business",
-  "It's MakeMeSites"
-];
 
-function Hero() {
+
+function Hero({lang}) {
+  const textLines = [
+    lang.home[0],
+    lang.home[1],
+    lang.home[2],
+    lang.home[3],
+  ];
   return (
     <section id="home" className='h-screen'>
       <div className="container mx-auto flex justify-center items-center h-screen">

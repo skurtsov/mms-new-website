@@ -50,7 +50,7 @@ const customStyles = {
   },
 };
 
-const PartnersGrid = () => {
+const PartnersGrid = ({lang}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const PartnersGrid = () => {
   return (
     <section className="py-10 mb-[10vh]" id="partners">
       <div className="container mx-auto">
-        <h2 className="text-6xl text-white text-center mb-8 mt-12">Our Clients</h2>
+        <h2 className="text-6xl text-white text-center mb-8 mt-12">{lang.partners.title}</h2>
         <div className="flex flex-wrap gap-4">
           {partners.map((partner, index) => (
             <a

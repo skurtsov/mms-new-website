@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-function ContactForm() {
+function ContactForm({lang}) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -17,9 +17,9 @@ function ContactForm() {
       <div className="container mx-auto flex justify-center items-center h-screen px-4">
         <div className="flex flex-col md:flex-row w-full justify-center items-start ">
           <div className="flex-1 flex flex-col h-full justify-center p-4">
-            <h3 className='text-4xl md:text-6xl text-white'>Contact us</h3>
+            <h3 className='text-4xl md:text-6xl text-white'>{lang.contact.title}</h3>
             <p className='text-white text-xl md:text-2xl mt-5 w-full md:w-[80%]'>
-            Our contact information below  
+            {lang.contact.subtitle}
             </p>
             <ul className=' mt-5 md:mt-10 text-white text-xl md:text-2xl'>
               <li className='mb-3 md:mb-5'><a  target="_blank" href="https://google.com"><FontAwesomeIcon  icon={faEnvelope}/> info@makemesites.com</a></li>
@@ -35,14 +35,14 @@ function ContactForm() {
 
           <div className="flex-1 h-full justify-center p-4">
 
-          <h3 className='text-4xl md:text-6xl text-white'>Or fill the form</h3>
+          <h3 className='text-4xl md:text-6xl text-white'>{lang.contact.title_form}</h3>
 
           <div className="flex flex-col">
  <div>
      
      <input
        type="text"
-       placeholder="Name"
+       placeholder={lang.contact.placeholder[0]}
        autoComplete="new-password"
        className="custom-input mt-1 block w-full    p-2"
      />
@@ -51,7 +51,7 @@ function ContactForm() {
      
      <input
        type="email"
-       placeholder="Enter your email"
+       placeholder={lang.contact.placeholder[1]}
        autoComplete="new-password"
        className="custom-input mt-1 block bg-transparent w-full   shadow-sm p-2"
      />
@@ -60,7 +60,7 @@ function ContactForm() {
      
      <input
        type="text"
-       placeholder="Enter your phone"
+       placeholder={lang.contact.placeholder[2]}
        autoComplete="new-password"
        className="custom-input mt-1 block w-full   shadow-sm p-2"
      />
@@ -69,7 +69,7 @@ function ContactForm() {
      
      <input
        type="text"
-       placeholder="Message(Optional)"
+       placeholder={lang.contact.placeholder[3]}
        autoComplete="new-password"
        className="custom-input mt-1 block w-full    p-2"
      />
@@ -77,7 +77,7 @@ function ContactForm() {
  </div>
         
       <button onClick={handleClick} className={isClicked ? 'clicked' : ''}>
-      <p>{isClicked ? 'Sent!' : 'Send'}</p>
+      <p>{isClicked ? lang.contact.button_sent : lang.contact.button_text}</p>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

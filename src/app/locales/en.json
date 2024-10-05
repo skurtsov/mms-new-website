@@ -1,0 +1,119 @@
+{
+  "header":["home",
+   "websites",
+    "apps",
+     "bots",
+      "modules",
+       "partners",
+        "contact"],
+
+  "home":[
+    "New generation of ",
+    "Software solutions  ",
+    "For your business",
+    "It's MakeMeSites"
+  ],
+
+  "webdev": {
+    "title":"Websites Development",
+    "subtitle": "So why Our websites the best?",
+ 
+    "features": {
+      "left": [
+        "Our websites help to attract new clients",
+        "Works on all devices",
+        "Helps to increase your profit",
+        "Our prices are lower than competitors"
+      ],
+      "right": [
+        "Our websites ready for use in 14 days",
+        "Our websites have Full technical support",
+        "Our websites have 100% quality guarantee",
+        "Our websites haven't hidden fees"
+      ]
+            
+    },
+    "button_text": "Consult me"
+  },
+  "apps": {
+    "title": "Mobile Applications ",
+    "subtitle": "We produce modern and rentable mobile apps for small and medium businesses",
+    "second_sub": "So why our apps are good",
+    "features": [
+      "Your APP return on investment less than  year",
+      "iOS/Android support",
+      "Published on App Store and Google Play",
+      "Full technical support"
+    ]
+  },
+  "bots": {
+    "title": "Bot's for business",
+    "subtitle": "We produce modern and rentable mobile apps for small and medium businesses",
+    "second_sub": "So why our apps are good",
+    "features": [
+      "Your APP return on investment less than  year",
+      "iOS/Android support",
+      "Published on App Store and Google Play",
+      "Full technical support 24/7"
+    ]
+  },
+  
+    "modulesDev": {
+      "title": "Modules technology",
+      "subtitle": "Our unique technology of re-usable modules can reduce the price of software up to 3 times",
+      "description": "You can start using our module technologies for your personal project, or resell it with a 300% margin",
+      "prices": {
+        "websites": {
+          "standard": {
+            "label": "Standard website price",
+            "value": "900$"
+          },
+          "moduled": {
+            "label": "Moduled website price",
+            "value": "300$"
+          }
+        },
+        "apps": {
+          "standard": {
+            "label": "Standard App price",
+            "value": "900$"
+          },
+          "moduled": {
+            "label": "Moduled App price",
+            "value": "300$"
+          }
+        },
+        "bots": {
+          "standard": {
+            "label": "Standard Bot price",
+            "value": "900$"
+          },
+          "moduled": {
+            "label": "Moduled Bot price",
+            "value": "300$"
+          }
+        }
+      },
+      "button_text": "Consult me"
+    },
+    "partners":{
+      "title":"Our partners "
+    },
+    "contact":{
+      "title":"Contact us",
+      "subtitle":"Our contact information below",
+      "title_form":"Or fill the form",
+      "placeholder":[
+        "Name",
+        "Enter your email",
+        "Enter your phone",
+        "Message(optional)"
+      ],
+      "button_text":"Send",
+      "button_sent":"Sent!"
+
+    }
+
+  
+  
+}

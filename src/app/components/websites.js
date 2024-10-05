@@ -8,7 +8,10 @@ import Button from './button';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Импортируйте CSS AOS
 
-function Websites() {
+
+
+
+function Websites({lang}) {
     const { scrollYProgress } = useViewportScroll();
     const [isMobile, setIsMobile] = useState(false);
     const [isClient, setIsClient] = useState(false); 
@@ -106,7 +109,7 @@ function Websites() {
                 <div className="mt-8 text-4xl md:text-6xl text-white text-center">
                     {!isMobile ? (
                         <motion.div style={{ scale }}>
-                            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="false">Websites development</h2>
+                            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="false">{lang.webdev.title}</h2>
                             <h3 className='mt-6 text-lg md:text-2xl text-white' data-aos="fade-up" data-aos-duration="800" data-aos-once="false">So why Our websites the best?</h3>
                         </motion.div>
                     ) : (
@@ -121,17 +124,17 @@ function Websites() {
                     <div className="flex-1 flex flex-col justify-center items-start p-4">
                         {!isMobile ? (
                             <motion.ul className="list-style-custom text-white text-xl md:text-2xl" style={{ scale: scaleList }}>
-                                <li className="mb-5">Our websites helps to attract new clients</li>
-                                <li className="mb-5">Works on all devices</li>
-                                <li className="mb-5">Helps to increase your profit</li>
-                                <li className="mb-5">Our prices are lower than competitors</li>
+                                <li className="mb-5">{lang.webdev.features.left[0]}</li>
+                                <li className="mb-5">{lang.webdev.features.left[1]}</li>
+                                <li className="mb-5">{lang.webdev.features.left[2]}</li>
+                                <li className="mb-5">{lang.webdev.features.left[3]}</li>
                             </motion.ul>
                         ) : (
                             <ul className="list-style-custom text-white text-xl md:text-2xl">
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">Our websites helps to attract new clients</li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">Works on all devices</li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">Helps to increase your profit</li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">Our prices are lower than competitors</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">{lang.webdev.features.left[0]}</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">{lang.webdev.features.left[1]}</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">{lang.webdev.features.left[2]}</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">{lang.webdev.features.left[3]}</li>
                             </ul>
                         )}
                     </div>
@@ -139,17 +142,17 @@ function Websites() {
                     <div className="flex-1 flex flex-col justify-center items-end p-4">
                         {!isMobile ? (
                             <motion.ul className="text-white text-right text-xl md:text-2xl" style={{ scale: scaleList }}>
-                                <li className="mb-5">Our websites ready for use in 14 days-</li>
-                                <li className="mb-5">Our websites have Full technical support-</li>
-                                <li className="mb-5">Our websites have 100% quality guarantee-</li>
-                                <li className="mb-5"> Our websites haven't hidden fees-</li>
+                                <li className="mb-5">{lang.webdev.features.right[0]}-</li>
+                                <li className="mb-5">{lang.webdev.features.right[1]}-</li>
+                                <li className="mb-5">{lang.webdev.features.right[2]}-</li>
+                                <li className="mb-5">{lang.webdev.features.right[3]}-</li>
                             </motion.ul>
                         ) : (
                             <ul className="text-white text-left md:text-right text-xl md:text-2xl">
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-Our websites help earn money </li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-Our websites help get new clients </li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-Our websites are fully adaptive </li>
-                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-Our websites have competitive prices </li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-{lang.webdev.features.right[0]}</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-{lang.webdev.features.right[1]} </li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-{lang.webdev.features.right[2]}</li>
+                                <li className="mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-once="false">-{lang.webdev.features.right[3]} </li>
                             </ul>
                         )}
                     </div>

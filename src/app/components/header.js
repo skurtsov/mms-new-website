@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-scroll';
 
-const StickyHeader = () => {
+const StickyHeader = ({lang}) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,7 +78,7 @@ const StickyHeader = () => {
         {!isMobile ? (
           <nav>
             <ul className="flex space-x-6">
-              {["home", "websites", "apps", "bots", "modules", "partners", "contact"].map((id) => (
+              {lang.header.map((id) => (
                 <li key={id}>
                   <Link
                     to={id}
@@ -101,7 +101,7 @@ const StickyHeader = () => {
                 <FontAwesomeIcon icon={faXmark} fontSize={38} color="#fff"/>
               </div>
               <ul className="mobile-menu-list flex justify-center items-center flex-col h-[70vh]">
-                {["home", "websites", "apps", "bots", "modules", "partners", "contact"].map((id) => (
+                {lang.header.map((id) => (
                   <li key={id} className="mb-5">
                     <Link
                       to={id}

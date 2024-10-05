@@ -5,7 +5,8 @@ import Image from 'next/image';
 import appimg from "../img/bot.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-function Bots() {
+
+function Bots({ lang }) {
   const { scrollYProgress } = useViewportScroll();
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false); // Проверка, что рендер на клиенте
@@ -44,17 +45,16 @@ function Bots() {
           {!isMobile && (
             <>
               <motion.div style={{ y: yImage }} className="flex-1 h-full items-start justify-start p-4">
-                <Image src={appimg} alt="Mobile applications" />
+                <Image src={appimg} alt="Bots for business" />
               </motion.div>
               <motion.div style={{ y: yText }} className="flex-1 flex flex-col h-full justify-center p-4">
-                <h3 className='text-4xl md:text-6xl text-white text-center md:text-left'>Bot's for business</h3>
-                <p className='text-white text-2xl mt-5 w-[80%]'>We produce modern and rentable mobile apps for small and medium businesses</p>
-                <p className='text-white text-2xl mt-9'>So why our apps are good</p>
+                <h3 className='text-4xl md:text-6xl text-white text-center md:text-left'>{lang.bots.title}</h3>
+                <p className='text-white text-2xl mt-5 w-[80%]'>{lang.bots.subtitle}</p>
+                <p className='text-white text-2xl mt-9'>{lang.bots.second_sub}</p>
                 <ul className='list-style-custom mt-10 text-white text-2xl'>
-                  <li className='mb-5'>Our websites help earn money</li>
-                  <li className='mb-5'>Our websites help get new clients</li>
-                  <li className='mb-5'>Our websites are fully adaptive</li>
-                  <li className='mb-5'>Our websites have competitive prices</li>
+                  {lang.bots.features.map((feature, index) => (
+                    <li key={index} className='mb-5'>{feature}</li>
+                  ))}
                 </ul>
               </motion.div>
             </>
@@ -65,26 +65,27 @@ function Bots() {
             <>
               <div className="flex-1 h-full items-start justify-start p-4" 
                    data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                <Image src={appimg} alt="Mobile applications" />
+                <Image src={appimg} alt="Bots for business" />
               </div>
               <div className="flex-1 flex flex-col h-full justify-center p-4">
                 <h3 className='text-4xl md:text-6xl text-white text-center md:text-left' 
                     data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                  Bot's for business
+                  {lang.bots.title}
                 </h3>
                 <p className='text-white text-2xl mt-5 w-[100%] text-center' 
                     data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                  We produce modern and rentable mobile apps for small and medium businesses
+                  {lang.bots.subtitle}
                 </p>
                 <p className='text-white text-2xl mt-9' 
                     data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                  So why our apps are good
+                  {lang.bots.second_sub}
                 </p>
                 <ul className='list-style-custom mt-10 text-white text-2xl'>
-                  <li className='mb-5' data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">Our websites help earn money</li>
-                  <li className='mb-5' data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">Our websites help get new clients</li>
-                  <li className='mb-5' data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">Our websites are fully adaptive</li>
-                  <li className='mb-5' data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">Our websites have competitive prices</li>
+                  {lang.bots.features.map((feature, index) => (
+                    <li key={index} className='mb-5' data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </>
