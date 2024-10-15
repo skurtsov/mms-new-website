@@ -8,12 +8,10 @@ import ModeluesDev from "../components/modulesdev";
 import PartnersGrid from "../components/partners";
 import Websites from "../components/websites";
 import styles from "../custom.css";
-import engtran from '../locales/en.json'; // Импортируем JSON как объект
+import engtran from '../locales/es.json'; // Импортируем JSON как объект
 
 export default function Page() {
   return (
-    <div className={styles.page}>
-      <Home/>
-    </div>
+    <Home lang={engtran}/>
   );
 }

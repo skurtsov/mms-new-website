@@ -4,8 +4,10 @@ import '../custom.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-scroll';
+import DropdownMenu from "./dropdown";
+import LangChanger from "./langchanger";
 
-const StickyHeader = ({lang}) => {
+const StickyHeader = ({ lang }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,19 +80,22 @@ const StickyHeader = ({lang}) => {
         {!isMobile ? (
           <nav>
             <ul className="flex space-x-6">
-              {lang.header.map((id) => (
-                <li key={id}>
+              {lang.header.map(({ id, label }) => (
+                <li key={id} className="">
                   <Link
                     to={id}
-                    className={`text-white cursor-pointer ${activeSection === id ? 'active_section' : ''}`}
+                    className={`text-white cursor-pointer  ${activeSection === id ? 'active_section' : ''}`}
                     smooth={true}
                     duration={500}
                     onClick={closeMenu}
                   >
-                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                    {label}
                   </Link>
                 </li>
               ))}
+                 <li>
+                  <LangChanger lang={lang}/>
+                </li>
             </ul>
           </nav>
         ) : (
@@ -98,11 +103,11 @@ const StickyHeader = ({lang}) => {
             <FontAwesomeIcon icon={faBars} fontSize={27} color="#fff" onClick={toggleMenu} />
             <div className={`mobile_menu ${isMenuOpen ? 'open' : ''}`}>
               <div className="myclose" onClick={closeMenu}>
-                <FontAwesomeIcon icon={faXmark} fontSize={38} color="#fff"/>
+                <FontAwesomeIcon icon={faXmark} fontSize={38} color="#fff" />
               </div>
-              <ul className="mobile-menu-list flex justify-center items-center flex-col h-[70vh]">
-                {lang.header.map((id) => (
-                  <li key={id} className="mb-5">
+              <ul className="mobile-menu-list mt-6 flex justify-center items-center flex-col h-[70vh]">
+                {lang.header.map(({ id, label }) => (
+                  <li key={id} className="mt-5">
                     <Link
                       to={id}
                       className={`text-white cursor-pointer text-2xl ${activeSection === id ? 'active_section' : ''}`}
@@ -110,10 +115,13 @@ const StickyHeader = ({lang}) => {
                       duration={500}
                       onClick={closeMenu}
                     >
-                      {id.charAt(0).toUpperCase() + id.slice(1)}
+                      {label}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <LangChanger lang={lang}/>
+                </li>
               </ul>
             </div>
           </>

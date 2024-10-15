@@ -1,12 +1,15 @@
 {
-  "header":["home",
-   "websites",
-    "apps",
-     "bots",
-      "modules",
-       "partners",
-        "contact"],
-
+  "header": [
+    { "id": "home", "label": "Homeee" },
+    { "id": "websites", "label": "Websites" },
+    { "id": "apps", "label": "Apps" },
+    { "id": "bots", "label": "Bots" },
+    { "id": "modules", "label": "Modules" },
+    { "id": "partners", "label": "Partners" },
+    { "id": "contact", "label": "Contact" }
+  ],
+    "next_lang":"español ",
+    "next_link":"/es",
   "home":[
     "New generation of ",
     "Software solutions  ",
@@ -48,13 +51,13 @@
   },
   "bots": {
     "title": "Bot's for business",
-    "subtitle": "We produce modern and rentable mobile apps for small and medium businesses",
-    "second_sub": "So why our apps are good",
+    "subtitle": "We produce Telegramm and Whatsup bots which will help your business",
+    "second_sub": "So why should you hoose Bots for your business",
     "features": [
-      "Your APP return on investment less than  year",
-      "iOS/Android support",
-      "Published on App Store and Google Play",
-      "Full technical support 24/7"
+      "Fast and cheap alternative for websites",
+      "One bot replaces Five employees",
+      "Easy to use and service",
+      "Integrated crypto payments"
     ]
   },
   
@@ -72,29 +75,30 @@
             "label": "Moduled website price",
             "value": "300$"
           }
+
         },
         "apps": {
           "standard": {
             "label": "Standard App price",
-            "value": "900$"
+            "value": "9000$"
           },
           "moduled": {
             "label": "Moduled App price",
-            "value": "300$"
+            "value": "2500$"
           }
         },
         "bots": {
           "standard": {
             "label": "Standard Bot price",
-            "value": "900$"
+            "value": "450$"
           },
           "moduled": {
             "label": "Moduled Bot price",
-            "value": "300$"
+            "value": "120$"
           }
         }
       },
-      "button_text": "Consult me"
+      "button_text": "Learn more"
     },
     "partners":{
       "title":"Our partners "

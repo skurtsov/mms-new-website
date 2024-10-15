@@ -1,0 +1,122 @@
+{
+  "header": [
+    { "id": "home", "label": "Inicio" },
+    { "id": "websites", "label": "Sitios Web" },
+    { "id": "apps", "label": "Aplicaciones" },
+    { "id": "bots", "label": "Bots" },
+    { "id": "modules", "label": "Modules" },
+    { "id": "partners", "label": "Socios" },
+    { "id": "contact", "label": "Contacto" }
+  ],
+  "next_lang": "Ingles",
+  "next_link":"/",
+
+  "home": [
+    "Nueva generación de",
+    "Soluciones de software",
+    "Para tu negocio",
+    "Es MakeMeSites"
+  ],
+
+  "webdev": {
+    "title": "Desarrollo de sitios web",
+    "subtitle": "¿Por qué nuestros sitios web son los mejores?",
+
+    "features": {
+      "left": [
+        "Nuestros sitios web ayudan a atraer nuevos clientes",
+        "Funciona en todos los dispositivos",
+        "Ayuda a aumentar tus ganancias",
+        "Nuestros precios son más bajos que los de la competencia"
+      ],
+      "right": [
+        "Nuestros sitios web están listos para usar en 14 días",
+        "Nuestros sitios web tienen soporte técnico completo",
+        "Nuestros sitios web tienen garantía de calidad del 100%",
+        "Nuestros sitios web no tienen tarifas ocultas"
+      ]
+    },
+    "button_text": "Consúltame"
+  },
+
+  "apps": {
+    "title": "Aplicaciones móviles",
+    "subtitle": "Producimos aplicaciones móviles modernas y rentables para pequeñas y medianas empresas",
+    "second_sub": "¿Por qué nuestras aplicaciones son buenas?",
+    "features": [
+      "Tu aplicación recupera la inversión en menos de un año",
+      "Soporte para iOS/Android",
+      "Publicadas en App Store y Google Play",
+      "Soporte técnico completo"
+    ]
+  },
+
+  "bots": {
+    "title": "Bots para negocios",
+    "subtitle": "Producimos bots para Telegram y WhatsApp que ayudarán a tu negocio",
+    "second_sub": "¿Por qué deberías elegir bots para tu negocio?",
+    "features": [
+      "Alternativa rápida y económica a los sitios web",
+      "Un bot reemplaza a cinco empleados",
+      "Fácil de usar y mantener",
+      "Pagos integrados con criptomonedas"
+    ]
+  },
+
+  "modulesDev": {
+    "title": "Tecnología de módulos",
+    "subtitle": "Nuestra tecnología única de módulos reutilizables puede reducir el precio del software hasta 3 veces",
+    "description": "Puedes comenzar a usar nuestras tecnologías de módulos para tu proyecto personal o revenderlas con un margen del 300%",
+    "prices": {
+      "websites": {
+        "standard": {
+          "label": "Precio de sitio web estándar",
+          "value": "900$"
+        },
+        "moduled": {
+          "label": "Precio de sitio web con módulos",
+          "value": "300$"
+        }
+      },
+      "apps": {
+        "standard": {
+          "label": "Precio de aplicación estándar",
+          "value": "9000$"
+        },
+        "moduled": {
+          "label": "Precio de aplicación con módulos",
+          "value": "2500$"
+        }
+      },
+      "bots": {
+        "standard": {
+          "label": "Precio de bot estándar",
+          "value": "450$"
+        },
+        "moduled": {
+          "label": "Precio de bot con módulos",
+          "value": "120$"
+        }
+      }
+    },
+    "button_text": "Más información"
+  },
+
+  "partners": {
+    "title": "Nuestros socios"
+  },
+
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Nuestra información de contacto a continuación",
+    "title_form": "O completa el formulario",
+    "placeholder": [
+      "Nombre",
+      "Ingresa tu correo electrónico",
+      "Ingresa tu teléfono",
+      "Mensaje (opcional)"
+    ],
+    "button_text": "Enviar",
+    "button_sent": "¡Enviado!"
+  }
+}
