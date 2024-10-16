@@ -61,7 +61,7 @@ function ModulesDev({lang}) {
 
             <div className='mt-8' 
                 data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                <Button text={lang.modulesDev.button_text} />
+                <Button text={lang.modulesDev.button_text} lang={lang}/>
             </div>
         </div>
     </section>

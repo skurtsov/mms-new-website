@@ -20,9 +20,9 @@ const partners = [
   { href: 'https://deluxe-signature.com/', src: deluxeImage, alt: 'Deluxe Signature' },
   { href: 'https://kolomarket.com.ua/', src: koloImage, alt: 'Kolo' },
   { href: 'https://t.me/TheMovieNerd_bot', src: movieImage, alt: 'Movie Nerd' },
-  { href: 'https://swap-line.com/', src: hypeImage, alt: 'Hype Exchange' },
+  { href: 'https://swap-line.com/', src: swapImg, alt: 'Hype Exchange' },
     //Modal
-    { href: '#', src: swapImg, alt: 'Remi' }, 
+    { href: '#', src: remiImage, alt: 'Remi' }, 
     //Modal
     { href: '#', src: cafeImage, alt: 'Cafe' },
 ];

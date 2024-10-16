@@ -100,6 +100,7 @@ function Apps({ lang }) {
                     </li>
                   ))}
                 </ul>
+                
               </div>
             </>
           )}

@@ -162,11 +162,11 @@ function Websites({lang}) {
                 <div className="mt-6">
                     {!isMobile ? (
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button text={"Consult me"} />
-                        </motion.div>
+                            <Button text={"Consult me"} lang={lang}/>
+                            </motion.div>
                     ) : (
                         <div data-aos="fade-up" data-aos-duration="800" data-aos-once="false">
-                            <Button text={"Consult me"} />
+                            <Button text={"Consult me"} lang={lang}/>
                         </div>
                     )}
                 </div>
