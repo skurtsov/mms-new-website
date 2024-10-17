@@ -65,10 +65,7 @@ function Button({ text, lang }) {
       console.log('Response:', response.data);
     } catch (error) {
       console.error('Error sending form:', error);
-    } finally {
-      setIsClicked(false);
-      closeModal();
-    }
+    } 
   };
 
   const modalVariants = {
@@ -96,7 +93,7 @@ function Button({ text, lang }) {
             >
               <form className="space-y-6" onSubmit={handleSubmit} autoComplete="off">
                 <div className="flex flex-col">
-                  <h3 className='text-white text-center text-2xl'>{lang.contact.title_form}</h3>
+                  <h3 className='text-white text-center text-2xl my-6'>{lang.contact.title_form_modal}</h3>
                   <div>
                     <input
                       type="text"

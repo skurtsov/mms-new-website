@@ -45,14 +45,14 @@ function ModulesDev({lang}) {
                     <div className="flex flex-col md:flex-row w-full mt-6 md:mt-10" key={category}>
                         {Object.entries(priceData).map(([type, price]) => (
                             <div className="flex-1 flex flex-col justify-center items-center p-4" key={type}>
-                                <h1 className='text-xl md:text-3xl' 
+                                <p className='text-xl md:text-3xl' 
                                     data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
                                     {price.label}
-                                </h1>
-                                <h3 className='text-lg md:text-2xl' 
+                                </p>
+                                <p className='text-lg md:text-2xl' 
                                     data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
                                     {price.value}
-                                </h3>
+                                </p>
                             </div>
                         ))}
                     </div>

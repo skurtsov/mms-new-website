@@ -1,6 +1,6 @@
 {
   "header": [
-    { "id": "home", "label": "Homeee" },
+    { "id": "home", "label": "Home" },
     { "id": "websites", "label": "Websites" },
     { "id": "apps", "label": "Apps" },
     { "id": "bots", "label": "Bots" },
@@ -107,6 +107,7 @@
       "title":"Contact us",
       "subtitle":"Our contact information below",
       "title_form":"Or fill the form",
+      "title_form_modal":"Fill the form and we will contact you",
       "placeholder":[
         "Name",
         "Enter your email",

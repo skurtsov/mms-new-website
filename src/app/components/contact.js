@@ -1,10 +1,12 @@
 "use client"; 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { motion } from "framer-motion";
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone,faPaperPlane,falinkedin} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ContactForm({ lang }) {
   const [isClicked, setIsClicked] = useState(false);
@@ -13,9 +15,13 @@ function ContactForm({ lang }) {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: false });
+  }, []);
+
   const handleClick = async () => {
     setIsClicked(true);
-    
+
     try {
       // Преобразуем данные в формат x-www-form-urlencoded
       const params = new URLSearchParams();
@@ -23,13 +29,13 @@ function ContactForm({ lang }) {
       params.append('email', email);
       params.append('phone', phone);
       params.append('message', message);
-  
+
       const response = await axios.post('https://makemesites.com/sendmail.php', params, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
-      
+
       console.log('Response:', response.data);
     } catch (error) {
       console.error('Error sending form:', error);
@@ -37,13 +43,14 @@ function ContactForm({ lang }) {
       setIsClicked(false);
     }
   };
-  
 
   return (
     <section id="contact" className='h-screen'>
       <div className="container mx-auto flex justify-center items-center h-screen px-4">
-        <div className="flex flex-col md:flex-row w-full justify-center items-start ">
-          <div className="flex-1 flex flex-col h-full justify-center p-4">
+        <div className="flex flex-col md:flex-row w-full justify-center items-start">
+          
+          {/* Левая часть: контактная информация с анимацией слева */}
+          <div className="flex-1 flex flex-col h-full justify-center p-4" data-aos="fade-left">
             <h3 className='text-4xl md:text-6xl text-white'>{lang.contact.title}</h3>
             <p className='text-white text-xl md:text-2xl mt-5 w-full md:w-[80%]'>
               {lang.contact.subtitle}
@@ -60,15 +67,16 @@ function ContactForm({ lang }) {
                 </a>
               </li>
               <li className='mb-3 md:mb-5'>
-                <a target="_blank" rel="noopener noreferrer" href="https://t.me/simkurt"><FontAwesomeIcon icon={faPaperPlane}/>Telegram</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://t.me/simkurt"><FontAwesomeIcon className="mr-2" icon={faTelegram}/>Telegram</a>
               </li>
               <li className='mb-3 md:mb-5'>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/102343712/"><FontAwesomeIcon icon={falinkedin}/>LinkedIn</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/102343712/"><FontAwesomeIcon className="mr-4" icon={faLinkedin}/>LinkedIn</a>
               </li>
             </ul>
           </div>
 
-          <div className="flex-1 h-full justify-center p-4">
+          {/* Правая часть: форма с анимацией справа */}
+          <div className="flex-1 h-full justify-center p-4" data-aos="fade-right">
             <h3 className='text-4xl md:text-6xl text-white'>{lang.contact.title_form}</h3>
             <div className="flex flex-col">
               <div>
@@ -130,7 +138,6 @@ function ContactForm({ lang }) {
           </div>
         </div>
       </div>
-      {name}
     </section>
   );
 }

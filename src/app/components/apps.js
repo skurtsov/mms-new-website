@@ -9,24 +9,24 @@ import 'aos/dist/aos.css';
 function Apps({ lang }) {
   const { scrollYProgress } = useViewportScroll();
   const [isMobile, setIsMobile] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (isClient) {
-      const handleResize = () => {
-        setIsMobile(screen.width < 768);
-      };
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-      handleResize();
-      window.addEventListener("resize", handleResize);
+    // Проверяем размеры экрана при первой загрузке
+    handleResize();
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-
+    // Инициализация AOS для мобильных устройств
     AOS.init();
-  }, [isClient]);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const x = useTransform(scrollYProgress, [0, 0.3], [-700, 0]); 
   const xReverse = useTransform(scrollYProgress, [0, 0.3], [700, 0]);
@@ -76,9 +76,7 @@ function Apps({ lang }) {
             <>
               <div className="flex-1 h-full items-start justify-start p-4" 
                    data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-                <motion.div>
                   <Image src={appimg} alt="Mobile applications" className="w-full h-auto max-w-[350px] md:max-w-none mx-auto" />
-                </motion.div>
               </div>
               <div className="flex-1 flex flex-col h-full justify-center p-4">
                 <h3 className='text-4xl md:text-6xl text-white text-center md:text-left' 

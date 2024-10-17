@@ -110,6 +110,8 @@
     "title": "Contáctanos",
     "subtitle": "Nuestra información de contacto a continuación",
     "title_form": "O completa el formulario",
+    "title_form_modal":"Llena el formulario y nos pondremos en contacto contigo",
+
     "placeholder": [
       "Nombre",
       "Ingresa tu correo electrónico",
