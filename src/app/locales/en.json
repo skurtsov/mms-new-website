@@ -9,7 +9,7 @@
     { "id": "contact", "label": "Contact" }
   ],
     "next_lang":"español ",
-    "next_link":"/es",
+    "next_link":"/es.html",
   "home":[
     "New generation of ",
     "Software solutions  ",
@@ -20,7 +20,7 @@
   "webdev": {
     "title":"Websites Development",
     "subtitle": "So why Our websites the best?",
- 
+
     "features": {
       "left": [
         "Our websites help to attract new clients",
@@ -34,7 +34,7 @@
         "Our websites have 100% quality guarantee",
         "Our websites haven't hidden fees"
       ]
-            
+
     },
     "button_text": "Consult me"
   },
@@ -60,7 +60,7 @@
       "Integrated crypto payments"
     ]
   },
-  
+
     "modulesDev": {
       "title": "Modules technology",
       "subtitle": "Our unique technology of re-usable modules can reduce the price of software up to 3 times",
@@ -119,6 +119,6 @@
 
     }
 
-  
-  
+
+
 }

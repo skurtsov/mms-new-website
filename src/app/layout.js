@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import PrivacyControls from "./components/PrivacyControls";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,7 +25,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div id="site-content">{children}</div>
+        <PrivacyControls />
       </body>
     </html>
   );

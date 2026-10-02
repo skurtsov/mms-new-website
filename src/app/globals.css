@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/nyb0kom.css");
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,14 +64,7 @@ transition-duration: .8s;
   bottom: 10px;
   transform: translateX(110%);
 }
-/*Paperplane test*/
-@import "nib"
-
-* {
-  transition: all .15s;
-  outline: none;
-  overflow: hidden;
-}
+/* Paper plane button styles; layout overflow is controlled by containers. */
 
 button {
   font-size: 17px;
@@ -215,3 +209,30 @@ a.fromLeft:after{  transform-origin:  0% 50%; }
   transition: transform 250ms ease-in-out;
   border-bottom: solid 3px #fff;  
 }
+
+.inquiry-form { color:white; }
+.form-privacy { font-family:Arial,sans-serif; line-height:1.6; font-size:14px; margin-top:20px; }
+.form-privacy a { text-transform:none; text-decoration:underline; }
+.form-trap { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+.form-send { margin:24px 0; padding:12px; }
+.form-send:disabled { opacity:.6; cursor:wait; }
+.site-footer { border-top:1px solid #ffffff50; padding:32px max(24px,5vw); color:white; display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+.site-footer nav { display:flex; flex-wrap:wrap; align-items:center; gap:24px; }
+.site-footer a { font-size:14px; }
+.site-footer button { width:auto; height:auto; margin:0; padding:8px 16px; font-size:14px; }
+.cookie-banner { position:fixed; z-index:1000; bottom:20px; right:20px; width:min(520px,calc(100vw - 40px)); max-height:85vh; overflow-y:auto; color:white; background:#04105d; border:2px solid white; border-radius:20px; padding:24px; box-shadow:0 12px 48px #0008; font-family:Arial,sans-serif; }
+.cookie-banner h2 { font-size:24px; margin-bottom:12px; }
+.cookie-banner p { line-height:1.6; margin-bottom:12px; }
+.cookie-banner a { text-transform:none; text-decoration:underline; }
+.cookie-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+.cookie-actions button { flex:1; min-width:160px; margin:0; width:auto; height:auto; min-height:48px; padding:12px; font-size:16px; }
+.legal-page { max-width:900px; margin:auto; padding:48px 24px 80px; color:white; font-family:Arial,sans-serif; line-height:1.8; }
+.legal-page h1 { font-size:clamp(32px,5vw,52px); margin:24px 0; }
+.legal-page h2 { font-size:24px; margin:32px 0 12px; }
+.legal-page p { margin:12px 0; }
+.legal-page a { text-transform:none; text-decoration:underline; }
+.legal-page table { width:100%; border-collapse:collapse; font-size:14px; }
+.legal-page th,.legal-page td { padding:12px; border:1px solid #ffffff60; text-align:left; }
+.legal-table { overflow-x:auto; }
+:focus-visible { outline:3px solid #f8db65; outline-offset:4px; }
+@media(max-width:640px) { .site-footer nav { flex-direction:column; align-items:flex-start; } }
