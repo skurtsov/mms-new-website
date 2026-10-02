@@ -64,14 +64,7 @@ transition-duration: .8s;
   bottom: 10px;
   transform: translateX(110%);
 }
-/*Paperplane test*/
-
-
-* {
-  transition: all .15s;
-  outline: none;
-  overflow: hidden;
-}
+/* Paper plane button styles; layout overflow is controlled by containers. */
 
 button {
   font-size: 17px;
